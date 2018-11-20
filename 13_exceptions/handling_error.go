@@ -1,29 +1,29 @@
-// package main
+package main
 
-// import (
-// 	"encoding/json"
-// 	"fmt"
-// 	"log"
-// )
+import (
+	"encoding/json"
+	"fmt"
+	"log"
+)
 
-// type person struct {
-// 	First   string
-// 	Last    string
-// 	Sayings []string
-// }
+type person struct {
+	First   string
+	Last    string
+	Sayings []string
+}
 
-// func main() {
-// 	p1 := person{
-// 		First:   "James",
-// 		Last:    "Bond",
-// 		Sayings: []string{"Shaken, not stirred", "Any last wishes?", "Never say never"},
-// 	}
+func main() {
+	p1 := person{
+		First:   "James",
+		Last:    "Bond",
+		Sayings: []string{"Shaken, not stirred", "Any last wishes?", "Never say never"},
+	}
 
-// 	bs, err := json.Marshal(p1)
+	bs, err := json.Marshal(p1)
 
-// 	if err != nil {
-// 		log.Fatalln("JSON did not marshal", err)
-// 	}
+	if err != nil {
+		log.Fatalln("JSON did not marshal", err)
+	}
 
-// 	fmt.Println(string(bs))
-// }
+	fmt.Println(string(bs))
+}
